@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<script>
+    function skipLine() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function print(frase) {
+        document.write(frase);
+        skipLine();
+    }
+
+    /*function lottery(n) {
+        return Math.round(Math.random() * n);
+    }
+    let name = prompt("Ingrese su nombre");
+    let numberSystem = lottery(10);
+    let numberEntered = parseInt(prompt("Ingrese un número al azar"));
+
+
+    if (numberSystem == numberEntered){
+        print(name + " Si acertaste");
+    }else{
+        print(name + " No acertaste");
+
+    }*/
+
+    //Aquí se le indica al usuario si su numero fue mayor o menor 
+
+    let name = prompt("Ingrese su nombre");
+    let numberSystem = Math.round(Math.random()*10);
+    let numberEntered = parseInt(prompt("Ingrese un número al azar"));
+
+    if(numberSystem == numberEntered){
+        print(name + " Si acertaste");
+
+    }else{
+        if(numberSystem>numberSystem){
+            print(name +" , no acertaste y el numero era menor que tu número");
+        }else{
+            print(name + ", no acertaste y el numero era mayor que tu número");
+        }
+    }
+</script>

@@ -1,0 +1,27 @@
+
+    <meta charset="UTF-8">
+   <h3>Programa para saber si alguien puede conducir</h3>
+
+   <script>
+      function skipLine() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function print(frase) {
+        document.write(frase);
+        skipLine();
+    }
+
+    let age = parseInt(prompt("Ingrese su edad"));
+
+    let licence = prompt("Tiene licencia? responda si o no");
+
+    if((age >=18) && (licence == "si")){
+        
+        print("puedes conducir");
+    }else{
+        print("No puedes conducir");
+    }
+
+   </script>

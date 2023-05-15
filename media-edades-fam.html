@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<h1>Media edades de una familia</h1>
+<script>
+    function skipLine() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function print(frase) {
+        document.write(frase);
+        skipLine();
+    }
+
+    let numMiembros = parseInt(prompt("Ingrese la cantiad de miembos de su familia"));
+    let contador = 1;
+    let totaledades = 0;
+
+    while (contador <= numMiembros) {
+
+        edad = parseInt(prompt("Ingrese el numero de miembros"));
+        totaledades = totaledades + edad;
+        contador++;
+    }
+
+    let mediaedades = totaledades / numMiembros;
+
+    print("La suma total de las edades es de:" + totaledades);
+    print("la media de edades de esta familia es de:" + mediaedades)
+    /*let edadMino = 67;
+    let edadNita =66;
+    let paty = 47;
+    let vero =45;
+    let flor = 37;
+    let ame =42;
+    let lu = 19;
+    let cami =14;
+
+    let totaledades = edadMino + edadNita +paty + vero + flor + ame + lu + cami;
+    let mediaedades = totaledades/8; 
+
+    print("la media de edad en la familia Hernández Soc es de: " + mediaedades);*/
+
+</script>

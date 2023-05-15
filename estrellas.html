@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1>Programar juego de adivinanza</h1>
+<script>
+    function skipLine() {
+        document.write("<br>");
+
+    }
+
+    function print(frase) {
+        document.write(frase);
+        skipLine();
+    }
+//for anidados
+    for (let lineas = 1; lineas <= 3; lineas++) {
+        for (let columnas = 1; columnas <= 10; columnas++) {
+            document.write("*");
+        }
+        skipLine();
+
+    }
+    skipLine();
+    skipLine();
+    print("Fin");
+
+</script>

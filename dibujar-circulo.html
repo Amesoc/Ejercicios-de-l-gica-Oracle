@@ -1,0 +1,45 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+   const screen = document.querySelector("canvas");
+    let pincel = screen.getContext("2d");
+
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function drawCircle(x, y, radio, color) {
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2 * 3.14);
+        pincel.fill();
+
+
+    }
+    //Esta forma es llamando la funcion para cada circulito
+    /*drawCircle(300,220,10,"blue");
+    drawCircle(300,200,10,"red");
+    drawCircle(300,180,10, "yellow");
+    drawCircle(280,200,10,"orange");
+    drawCircle(320,200, 10, "black");*/
+
+
+    //esta forma es creando una funcion llamada drawFlower donde permita mover las coordenadas 
+
+    function drawFlower(x, y) {
+        drawCircle (x, y+20, 10, "blue");
+        drawCircle (x, y, 10, "red");
+        drawCircle (x, y-20, 10, "yellow");
+        drawCircle (x-20, y, 10, "orange");
+        drawCircle (x+20, y, 10, "black");
+
+    }
+    drawFlower(300,200);
+
+
+
+
+
+
+</script>

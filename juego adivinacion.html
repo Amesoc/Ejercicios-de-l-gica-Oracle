@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<h1>Programar juego de adivinanza</h1>
+<script>
+    function skipLine() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function print(frase) {
+        document.write(frase);
+        skipLine();
+    }
+
+    let numeroPensado = Math.round(Math.random() * 10);
+    //Los Math me dicen 1.- calcula un numero randomico que este entre 0 y 10 y redondealo con round
+    let intentos = 3;
+    let contador = 1;
+    
+    while (contador <= intentos){
+        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10"));
+
+
+        if (numeroPensado == numeroLanzado) {
+            alert("usted acertó , en el intento " + contador + " el número pensado era " + numeroPensado);
+            break;
+        }
+        else {
+            alert("Lo sentimos usted erró");
+        }
+        contador++;
+    }
+    
+    if (numeroPensado == numeroLanzado){
+        print(" usted acertó , en el intento " + contador + " el número pensado era: " + numeroPensado);
+    }
+    else {
+        print("usted erró, el número pensado era: " + numeroPensado);
+    }
+
+    print("fin");
+
+
+</script>

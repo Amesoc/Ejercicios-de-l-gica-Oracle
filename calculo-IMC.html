@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+<h1>Programa para calcular el IMC</h1>
+<script>
+    function skipLine() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function print(frase) {
+        document.write(frase);
+        skipLine();
+    }
+
+    /*function calculateImc(weigh, height, name) {
+        let imc = weigh / (height * height);
+        print("El IMC es de: " + name + " es " + imc)
+    }
+
+
+    calculateImc(71, 1.72, "Ame");
+    calculateImc(55, 1.65, "Lu");*/
+
+    function calculateImc(weigh, height) {
+        return (weigh / (height * height));
+    }
+
+    let name = prompt("Ingrese su nombre")
+
+    let declaredWeight = prompt(name + " Informe su peso");
+
+    let declaredHeight = prompt(name + " Informe su altura");
+
+    let imcCalculated = calculateImc(declaredWeight, declaredHeight);
+
+    print(name + " su IMC calculado es: " + imcCalculated);
+
+    if (imcCalculated < 18.5) {
+        print("rango abajo de lo recomedado");
+    }
+    if (imcCalculated  >= 18.5) {
+        if(imcCalculated<25){
+            print("en el rango normal");
+        }
+    }
+
+    if (imcCalculated  >= 25) {
+        if(imcCalculated<=30){
+            print("rango de sobrepeso");
+        }
+    }
+
+    if (imcCalculated >= 30) {
+        print("rango considerado Obesidad");
+    }
+    
+
+
+</script>

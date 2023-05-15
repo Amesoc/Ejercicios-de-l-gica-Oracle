@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<h1>Programar mundiales de la FIFA</h1>
+<script>
+    function skipLine() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function print(frase) {
+        document.write(frase);
+        skipLine();
+    }
+
+    let firstmundial = 1930;
+    //let limit = parseInt(prompt("Ingrese el año límite para calcular"))
+
+    let limite = parseInt(prompt("Ingrese el año limite para calcular cuántos mundiales hubieron"));
+    //alert("Hubo mundial de la fifa en el año " + firstmundial);
+
+    //repite es traducido de repite
+
+    while (firstmundial <= limite) {
+
+        print("Hubo mundial de la fifa en el año " + firstmundial);
+        firstmundial = firstmundial + 4;
+    }
+
+    //alert("fin")
+
+
+
+
+
+</script>
